@@ -105,6 +105,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#backend" class="nav-link">Backend</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#boas-praticas-aplicadas" class="nav-link">Boas práticas aplicadas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -119,7 +123,16 @@
 <li>receber requisições da interface;</li>
 <li>validar os dados de entrada;</li>
 <li>manipular a coleção de tarefas em memória;</li>
-<li>responder com os resultados em formato JSON.</li>
+<li>responder com os resultados em formato JSON;</li>
+<li>manter a lógica de negócio separada dos roteamentos e da interface.</li>
+</ul>
+<h2 id="boas-praticas-aplicadas">Boas práticas aplicadas</h2>
+<ul>
+<li>controllers com responsabilidade de fluxo de requisições;</li>
+<li>models para representação e manipulação dos dados;</li>
+<li>services para encapsular regras específicas, como a criação de lembretes;</li>
+<li>rotas simples e bem organizadas;</li>
+<li>testes de controller e de integração para validar o comportamento esperado.</li>
 </ul></div>
             </div>
         </div>
