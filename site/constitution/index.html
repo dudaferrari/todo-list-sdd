@@ -108,15 +108,39 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#constitution" class="nav-link">Constitution</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#principios-principais" class="nav-link">Princípios principais</a>
+            <li class="nav-item" data-bs-level="2"><a href="#purpose" class="nav-link">Purpose</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#boas-praticas-de-programacao" class="nav-link">Boas práticas de programação</a>
+            <li class="nav-item" data-bs-level="2"><a href="#core-principles" class="nav-link">Core Principles</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#como-o-projeto-atende-essas-normas" class="nav-link">Como o projeto atende essas normas</a>
+            <li class="nav-item" data-bs-level="2"><a href="#additional-constraints" class="nav-link">Additional Constraints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#development-workflow" class="nav-link">Development Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quality-gates" class="nav-link">Quality Gates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#programming-standards" class="nav-link">Programming Standards</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#contribution-and-review-rules" class="nav-link">Contribution and Review Rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#security-and-reliability-expectations" class="nav-link">Security and Reliability Expectations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#governance" class="nav-link">Governance</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -128,37 +152,52 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="constitution">Constitution</h1>
-<p>A constituição do projeto define as regras de desenvolvimento para garantir consistência, qualidade e alinhamento com o escopo do sistema.</p>
-<h2 id="principios-principais">Princípios principais</h2>
-<ul>
-<li>arquitetura MVC obrigatória;</li>
-<li>uso de React e Express com JavaScript;</li>
-<li>monorepo;</li>
-<li>dados em memória sem banco de dados;</li>
-<li>testes para controllers e API;</li>
-<li>interface simples, responsiva e fácil de usar;</li>
-<li>organização clara do código e manutenção da estrutura do repositório.</li>
-</ul>
-<h2 id="boas-praticas-de-programacao">Boas práticas de programação</h2>
-<p>As boas práticas também fazem parte da governança do projeto. Elas orientam o desenvolvimento para que o código permaneça simples, legível e sustentável.</p>
-<ul>
-<li>escrever funções pequenas e com responsabilidade bem definida;</li>
-<li>usar nomes claros e significativos;</li>
-<li>evitar duplicação de lógica;</li>
-<li>manter a separação entre camadas e módulos;</li>
-<li>preservar a arquitetura existente ao introduzir mudanças;</li>
-<li>revisar impacto em testes, manutenção e experiência do usuário;</li>
-<li>validar entradas e evitar comportamentos frágeis.</li>
-</ul>
-<h2 id="como-o-projeto-atende-essas-normas">Como o projeto atende essas normas</h2>
-<p>O projeto já foi implementado respeitando essas diretrizes, com:</p>
-<ul>
-<li>controllers, models, routes e services bem separados;</li>
-<li>frontend e backend organizados em módulos próprios;</li>
-<li>dados mantidos em memória durante a execução;</li>
-<li>testes automatizados cobrindo o comportamento principal da API;</li>
-<li>documentação pública e estrutura preparada para publicação.</li>
-</ul></div>
+<p>Esta página apresenta a constituição do projeto em formato de documentação para o MkDocs.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This constitution defines the non-negotiable rules for the Todo List project. It exists to preserve architectural consistency, product simplicity, maintainability, and delivery quality throughout the lifecycle of the application.</p>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="i-mvc-architecture-is-mandatory">I. MVC Architecture Is Mandatory</h3>
+<p>All features MUST follow an MVC-style separation of responsibilities. Controllers handle request flow, models represent data and business rules, and views or UI components remain focused on presentation. Business logic MUST NOT be embedded directly in routes or UI components when it belongs to the application layer.</p>
+<h3 id="ii-simplicity-and-usability-guide-the-product">II. Simplicity and Usability Guide the Product</h3>
+<p>The application MUST prioritize a simple, responsive, and easy-to-use interface. New UI changes MUST improve clarity, reduce friction for common tasks, and avoid unnecessary complexity unless a feature directly supports the core todo-list workflow.</p>
+<h3 id="iii-quality-and-testing-are-non-negotiable">III. Quality and Testing Are Non-Negotiable</h3>
+<p>Every change that affects controllers, API behavior, or business rules MUST include tests. Unit tests MUST cover controller behavior, and integration tests MUST validate observable API behavior. Test coverage and validation MUST be treated as part of implementation, not as a follow-up task.</p>
+<p>Good programming practices MUST be followed in all code changes. The implementation MUST be readable, maintainable, and consistent with the project's conventions. Developers SHOULD write clear and small functions, keep responsibilities separated, avoid duplicated logic, and favor simple solutions over unnecessary complexity. Code MUST be easy to understand, with names that reflect intent and with comments only when they add real value. Security and input validation MUST be considered for any new behavior, especially when handling user data or external requests. Tests MUST be deterministic, meaningful, and focused on observable behavior rather than implementation details. Changes SHOULD preserve compatibility with the existing architecture and avoid introducing unnecessary dependencies or fragile patterns.</p>
+<h3 id="iv-maintainability-requires-clear-organization">IV. Maintainability Requires Clear Organization</h3>
+<p>Code MUST be organized, readable, and commented where behavior is not obvious. Naming MUST be explicit, modules MUST remain focused on a single responsibility, and changes MUST preserve the existing structure of the monorepo.</p>
+<h3 id="v-delivery-constraints-must-be-respected">V. Delivery Constraints Must Be Respected</h3>
+<p>The project MUST use React for the frontend, Express for the backend, and JavaScript for both layers. The repository MUST remain a monorepo with separate frontend and backend areas, and persistence MUST remain in-memory only because the stated scope does not require a database.</p>
+<h2 id="additional-constraints">Additional Constraints</h2>
+<p>The implementation stack for this project is fixed to React for the frontend, Express for the backend, and JavaScript for both layers. The repository MUST stay organized as a monorepo with separate frontend and backend areas, and persistence MUST remain in-memory only because the stated scope does not require a database.</p>
+<p>Any new feature MUST preserve the current architectural boundaries between frontend, backend, and shared application logic. The system MUST remain lightweight, easy to run locally, and free from external database setup. The application MUST remain suitable for a simple local demo or educational context without introducing unnecessary infrastructure complexity.</p>
+<h2 id="development-workflow">Development Workflow</h2>
+<p>All work MUST follow clear and consistent implementation practices. Changes MUST be implemented in a way that keeps the codebase easy to maintain, and any new behavior MUST be documented through code comments or relevant project documentation when the intent is not self-evident.</p>
+<p>Before a feature is considered complete, the relevant tests MUST be written or updated, the implementation MUST align with the architectural and performance principles in this constitution, and the resulting behavior MUST be verifiable locally.</p>
+<p>Conventional commits are expected for clear change history. Pull requests or delivery steps SHOULD preserve the structure of the existing project and avoid unnecessary rework.</p>
+<h2 id="quality-gates">Quality Gates</h2>
+<p>A feature is not considered complete unless the following checks are satisfied:</p>
+<ol>
+<li>The implementation follows the MVC separation of responsibilities.</li>
+<li>The feature is compatible with the monorepo organization.</li>
+<li>The behavior is covered by automated tests.</li>
+<li>The feature remains compatible with in-memory storage constraints.</li>
+<li>The change is documented where needed for future maintainers.</li>
+</ol>
+<h2 id="programming-standards">Programming Standards</h2>
+<p>The codebase MUST follow consistent programming standards to remain readable and maintainable. Developers SHOULD prefer simple, explicit solutions over clever or overly abstract implementations. Variable and function names MUST be descriptive and meaningful. Files MUST be organized according to their responsibility, and related logic SHOULD be grouped in a predictable way.</p>
+<p>Code SHOULD be written in a modular fashion, with small functions and focused responsibilities. Duplication SHOULD be avoided whenever possible, and repeated logic SHOULD be extracted into reusable helpers or services. Comments SHOULD be used sparingly and only when they clarify intent, business rules, or non-obvious decisions.</p>
+<p>The implementation MUST preserve the existing architectural boundaries and SHOULD not introduce unnecessary dependencies or fragile patterns. Any change that affects shared logic, APIs, or user-facing behavior MUST be reviewed for clarity, consistency, and maintainability.</p>
+<h2 id="contribution-and-review-rules">Contribution and Review Rules</h2>
+<p>Changes SHOULD be submitted using clear and descriptive commit messages. Conventional commits are preferred so that the purpose of each change is easy to understand. Each contribution SHOULD be focused, small, and easy to review.</p>
+<p>Code reviews SHOULD verify correctness, readability, test coverage, and alignment with the project's architectural principles. A change SHOULD NOT be accepted if it introduces unnecessary complexity, weak tests, or hidden behavior that is not documented.</p>
+<h2 id="security-and-reliability-expectations">Security and Reliability Expectations</h2>
+<p>Developers MUST consider basic security and reliability expectations when making changes. Input validation SHOULD be enforced where appropriate, sensitive data MUST NOT be exposed in logs or responses, and new dependencies SHOULD be introduced carefully and only when justified.</p>
+<p>The system SHOULD remain predictable, resilient, and easy to maintain over time. Changes MUST avoid introducing fragile behavior, silent failures, or undocumented side effects.</p>
+<h2 id="governance">Governance</h2>
+<p>This constitution supersedes informal preferences and shortcut decisions. Any change to these principles MUST be documented as a constitution amendment, reviewed for impact on architecture, testing, delivery constraints, and developer workflow, and reflected in the relevant planning and implementation artifacts before it is accepted.</p>
+<p>Compliance is reviewed at the feature level: plans, specifications, and tasks MUST be checked against these principles before implementation proceeds. If a requirement conflicts with this constitution, the conflict MUST be resolved by changing the proposal rather than weakening the principle.</p>
+<p>Any change that affects architecture, storage strategy, testing expectations, or deployment scope MUST be evaluated against this document before being implemented.</p>
+<p><strong>Version</strong>: 1.0.0 | <strong>Ratified</strong>: 2026-07-05 | <strong>Last Amended</strong>: 2026-07-05</p></div>
             </div>
         </div>
 
