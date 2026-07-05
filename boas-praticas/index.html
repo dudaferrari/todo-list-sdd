@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Arquitetura - Todo List Docs</title>
+        <title>Boas Práticas - Todo List Docs</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                                 <a href="../introducao/" class="nav-link">Introdução</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Arquitetura</a>
+                                <a href="../arquitetura/" class="nav-link">Arquitetura</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../mvc/" class="nav-link">MVC</a>
@@ -59,7 +59,7 @@
                                 <a href="../constitution/" class="nav-link">Constitution</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../boas-praticas/" class="nav-link">Boas Práticas</a>
+                                <a href="./" class="nav-link active" aria-current="page">Boas Práticas</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../features/" class="nav-link">Features</a>
@@ -79,12 +79,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../introducao/" class="nav-link">
+                                <a rel="prev" href="../constitution/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../mvc/" class="nav-link">
+                                <a rel="next" href="../features/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -106,13 +106,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#arquitetura" class="nav-link">Arquitetura</a>
+            <li class="nav-item" data-bs-level="1"><a href="#boas-praticas-de-programacao" class="nav-link">Boas práticas de programação</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#visao-geral" class="nav-link">Visão geral</a>
+            <li class="nav-item" data-bs-level="2"><a href="#principios-gerais" class="nav-link">Princípios gerais</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#como-a-arquitetura-e-organizada" class="nav-link">Como a arquitetura é organizada</a>
+            <li class="nav-item" data-bs-level="2"><a href="#como-aplicar-essas-praticas-no-projeto" class="nav-link">Como aplicar essas práticas no projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resultado-esperado" class="nav-link">Resultado esperado</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -123,23 +127,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="arquitetura">Arquitetura</h1>
-<p>A aplicação utiliza uma estrutura baseada em separação de responsabilidades para facilitar manutenção e evolução.</p>
-<h2 id="visao-geral">Visão geral</h2>
+<h1 id="boas-praticas-de-programacao">Boas práticas de programação</h1>
+<p>Esta página reúne as diretrizes práticas que ajudam a manter o projeto simples, legível e sustentável ao longo do tempo.</p>
+<h2 id="principios-gerais">Princípios gerais</h2>
 <ul>
-<li>Frontend: interface em React para interação com o usuário.</li>
-<li>Backend: API em Express para operações de tarefas.</li>
-<li>Dados: armazenamento em memória, sem banco de dados.</li>
+<li>escrever funções pequenas e com responsabilidade bem definida;</li>
+<li>usar nomes claros e significativos;</li>
+<li>evitar duplicação de lógica;</li>
+<li>manter a separação entre camadas e módulos;</li>
+<li>preservar a arquitetura existente ao introduzir mudanças;</li>
+<li>revisar impacto em testes, manutenção e experiência do usuário;</li>
+<li>validar entradas e evitar comportamentos frágeis.</li>
 </ul>
-<h2 id="como-a-arquitetura-e-organizada">Como a arquitetura é organizada</h2>
-<p>A solução foi pensada para respeitar as boas práticas definidas na constituição:</p>
-<ul>
-<li>o frontend fica voltado à apresentação e interação;</li>
-<li>o backend concentra a lógica de aplicação e os endpoints da API;</li>
-<li>os dados são manipulados por modelos e serviços específicos;</li>
-<li>a comunicação entre as camadas ocorre de forma clara e previsível.</li>
-</ul>
-<p>Essa organização reduz o acoplamento e torna a aplicação mais simples de evoluir.</p></div>
+<h2 id="como-aplicar-essas-praticas-no-projeto">Como aplicar essas práticas no projeto</h2>
+<ol>
+<li>Mantenha cada arquivo voltado a uma responsabilidade específica.</li>
+<li>Prefira soluções explícitas a soluções excessivamente abstratas.</li>
+<li>Extraia lógica repetida para helpers ou serviços quando fizer sentido.</li>
+<li>Escreva testes que validem o comportamento observável da aplicação.</li>
+<li>Documente decisões importantes quando o contexto não for óbvio.</li>
+</ol>
+<h2 id="resultado-esperado">Resultado esperado</h2>
+<p>Com essas práticas, o código fica mais fácil de entender, evoluir e revisar, o que contribui diretamente para a qualidade do projeto e para a experiência de quem mantém o sistema.</p></div>
             </div>
         </div>
 
