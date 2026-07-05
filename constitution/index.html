@@ -140,7 +140,24 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#governance" class="nav-link">Governance</a>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#constituicao-do-projeto" class="nav-link">Constituição do Projeto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#proposito" class="nav-link">Propósito</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#principios-essenciais" class="nav-link">Princípios essenciais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#boas-praticas-resumidas" class="nav-link">Boas práticas resumidas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#alteracoes-e-emendas" class="nav-link">Alterações e emendas</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -193,11 +210,31 @@
 <h2 id="security-and-reliability-expectations">Security and Reliability Expectations</h2>
 <p>Developers MUST consider basic security and reliability expectations when making changes. Input validation SHOULD be enforced where appropriate, sensitive data MUST NOT be exposed in logs or responses, and new dependencies SHOULD be introduced carefully and only when justified.</p>
 <p>The system SHOULD remain predictable, resilient, and easy to maintain over time. Changes MUST avoid introducing fragile behavior, silent failures, or undocumented side effects.</p>
-<h2 id="governance">Governance</h2>
-<p>This constitution supersedes informal preferences and shortcut decisions. Any change to these principles MUST be documented as a constitution amendment, reviewed for impact on architecture, testing, delivery constraints, and developer workflow, and reflected in the relevant planning and implementation artifacts before it is accepted.</p>
-<p>Compliance is reviewed at the feature level: plans, specifications, and tasks MUST be checked against these principles before implementation proceeds. If a requirement conflicts with this constitution, the conflict MUST be resolved by changing the proposal rather than weakening the principle.</p>
-<p>Any change that affects architecture, storage strategy, testing expectations, or deployment scope MUST be evaluated against this document before being implemented.</p>
-<p><strong>Version</strong>: 1.0.0 | <strong>Ratified</strong>: 2026-07-05 | <strong>Last Amended</strong>: 2026-07-05</p></div>
+<h1 id="constituicao-do-projeto">Constituição do Projeto</h1>
+<p>Esta página contém a constituição do projeto — regras e princípios essenciais para decisões arquiteturais e de entrega.</p>
+<h2 id="proposito">Propósito</h2>
+<p>Preservar consistência arquitetural, simplicidade do produto, manutenibilidade e qualidade de entrega.</p>
+<h2 id="principios-essenciais">Princípios essenciais</h2>
+<ul>
+<li><strong>MVC obrigatório:</strong> separação clara entre controllers, models e views/UI.</li>
+<li><strong>Simplicidade:</strong> interfaces e APIs devem ser diretas e de baixo atrito.</li>
+<li><strong>Testes obrigatórios:</strong> mudanças em controllers ou regras de negócio devem incluir testes.</li>
+<li><strong>Persistência em memória:</strong> sem banco de dados neste escopo do projeto.</li>
+<li><strong>Monorepo:</strong> frontend e backend organizados em áreas separadas no mesmo repositório.</li>
+<li><strong>Stack:</strong> React (frontend) e Express (backend) em JavaScript.</li>
+</ul>
+<h2 id="boas-praticas-resumidas">Boas práticas resumidas</h2>
+<ul>
+<li>Funções pequenas e responsabilidades únicas.</li>
+<li>Nomes claros e legíveis.</li>
+<li>Evitar duplicação; extrair helpers quando necessário.</li>
+<li>Validar entradas e tratar erros explicitamente.</li>
+<li>Documentar decisões relevantes.</li>
+</ul>
+<p>Para diretrizes de implementação mais detalhadas, veja a página: <a href="../boas-praticas/">Boas Práticas</a>.</p>
+<h2 id="alteracoes-e-emendas">Alterações e emendas</h2>
+<p>Alterações a esta constituição exigem emenda documentada e revisão de impacto sobre arquitetura, testes e entrega.</p>
+<p>Versão: 1.0.0 — Ratificado: 2026-07-05</p></div>
             </div>
         </div>
 
