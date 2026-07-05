@@ -68,13 +68,35 @@ Code reviews SHOULD verify correctness, readability, test coverage, and alignmen
 Developers MUST consider basic security and reliability expectations when making changes. Input validation SHOULD be enforced where appropriate, sensitive data MUST NOT be exposed in logs or responses, and new dependencies SHOULD be introduced carefully and only when justified.
 
 The system SHOULD remain predictable, resilient, and easy to maintain over time. Changes MUST avoid introducing fragile behavior, silent failures, or undocumented side effects.
+# Constituição do Projeto
 
-## Governance
+Esta página contém a constituição do projeto — regras e princípios essenciais para decisões arquiteturais e de entrega.
 
-This constitution supersedes informal preferences and shortcut decisions. Any change to these principles MUST be documented as a constitution amendment, reviewed for impact on architecture, testing, delivery constraints, and developer workflow, and reflected in the relevant planning and implementation artifacts before it is accepted.
+## Propósito
 
-Compliance is reviewed at the feature level: plans, specifications, and tasks MUST be checked against these principles before implementation proceeds. If a requirement conflicts with this constitution, the conflict MUST be resolved by changing the proposal rather than weakening the principle.
+Preservar consistência arquitetural, simplicidade do produto, manutenibilidade e qualidade de entrega.
 
-Any change that affects architecture, storage strategy, testing expectations, or deployment scope MUST be evaluated against this document before being implemented.
+## Princípios essenciais
 
-**Version**: 1.0.0 | **Ratified**: 2026-07-05 | **Last Amended**: 2026-07-05
+- **MVC obrigatório:** separação clara entre controllers, models e views/UI.
+- **Simplicidade:** interfaces e APIs devem ser diretas e de baixo atrito.
+- **Testes obrigatórios:** mudanças em controllers ou regras de negócio devem incluir testes.
+- **Persistência em memória:** sem banco de dados neste escopo do projeto.
+- **Monorepo:** frontend e backend organizados em áreas separadas no mesmo repositório.
+- **Stack:** React (frontend) e Express (backend) em JavaScript.
+
+## Boas práticas resumidas
+
+- Funções pequenas e responsabilidades únicas.
+- Nomes claros e legíveis.
+- Evitar duplicação; extrair helpers quando necessário.
+- Validar entradas e tratar erros explicitamente.
+- Documentar decisões relevantes.
+
+Para diretrizes de implementação mais detalhadas, veja a página: [Boas Práticas](boas-praticas.md).
+
+## Alterações e emendas
+
+Alterações a esta constituição exigem emenda documentada e revisão de impacto sobre arquitetura, testes e entrega.
+
+Versão: 1.0.0 — Ratificado: 2026-07-05
