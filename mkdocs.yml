@@ -1,0 +1,14 @@
+site_name: Todo List Docs
+
+nav:
+  - Introdução: introducao.md
+  - Arquitetura: arquitetura.md
+  - MVC: mvc.md
+  - Monorepo: monorepo.md
+  - API: api.md
+  - Frontend: frontend.md
+  - Backend: backend.md
+  - Constitution: constitution.md
+  - Features: features.md
+  - Como Executar: como-executar.md
+  - Conclusão: conclusao.md

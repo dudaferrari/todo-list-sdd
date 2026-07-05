@@ -1,0 +1,20 @@
+{
+    "name": "todo-list-sdd",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "start": "node apps/backend/app.js",
+        "dev": "node scripts/dev.js",
+        "dev:backend": "node apps/backend/app.js",
+        "dev:frontend": "npm --workspace apps/frontend run dev",
+        "test": "node --test apps/backend/tests/**/*.test.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.6",
+        "express": "^4.21.2",
+        "supertest": "^7.0.0"
+    }
+}

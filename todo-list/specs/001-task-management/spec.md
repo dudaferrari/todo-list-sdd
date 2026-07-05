@@ -10,6 +10,11 @@
 
 ## User Scenarios & Testing *(mandatory)*
 
+## Clarifications
+
+### Session 2026-07-05
+- Q: A data do lembrete é obrigatória e deve ser informada em formato de data válido? → A: Sim
+
 ### User Story 1 - Create and view tasks (Priority: P1)
 
 The user wants to create todo tasks with the required information and view the complete list of tasks in the application.
@@ -51,6 +56,7 @@ The user wants to remove tasks that are no longer needed.
 ### Functional Requirements
 
 - **FR-001**: The system MUST allow users to create a task with a title, description, reminder date, and status.
+- **FR-001A**: The system MUST require a valid reminder date when creating a task.
 - **FR-002**: The system MUST display all created tasks in a list view.
 - **FR-003**: The system MUST allow users to delete a task from the list.
 - **FR-004**: The system MUST show the task title, description, reminder date, and status for each task.
